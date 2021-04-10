@@ -1,5 +1,5 @@
 import Head from "next/head"
-import Link from "next/link"
+import MyLink from "../../components/MyLink"
 import styles from '../../styles/Home.module.css'
 
 const title = 'First Post'
@@ -13,9 +13,7 @@ export default function FirstPost() {
             </Head>
             <h1>{title}</h1>
             <h2>
-                <Link href="/">
-                <a>Back to home</a>
-                </Link>
+                <MyLink href='/' text='Back to home' />
             </h2>
         </div>
     )

@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import Link from 'next/link'
+import Profile from '../components/Profile'
+import MyLink from '../components/MyLink'
 
 export default function Home() {
 
@@ -13,17 +14,20 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-      <h1 className="title">
-        Read{' '}
-        <Link href="/posts/first-post">
-          <a>this page!</a>
-        </Link>
-      </h1>
+        <h1 className="title">
+          Read{' '}
+          <MyLink 
+            href="/posts/first-post"
+            text='this page!'
+          />
+        </h1>
 
         <p className={styles.description}>
           Get started by editing{' '}
           <code className={styles.code}>pages/index.js</code>
         </p>
+
+        <Profile />
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
